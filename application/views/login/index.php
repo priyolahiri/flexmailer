@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Flexmailer | Server Error</title>
+<title>Flexmailer | Home</title>
 <meta charset="UTF-8">
 <meta name="description" content="" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -24,14 +24,29 @@
 	 </div>
 	 <div class="col_12">
 	 <ul class="breadcrumbs alt1">
-	 	<li><a href="/">Home</a></li>
-	 	<li><a href="">Page Not Found</a></li>
+	 	<li><a href="/">Flexmailer</a></li>
+	 	<li><a href="">Login</a></li>
 	 </ul>
 	 </div>
 	 
-	 <div class="col_12">
-	 <h3>Page Not Found</h3>
-	 <p>Sorry, but what you are looking for does not exist</p>
+	 <div class="col_4">
+	 	&nbsp;
+	 </div>
+	 
+	 <div class="col_4">
+	 <h5>Login</h5>
+	 <form method="post" action="/login">
+	 	<?php if ($msg) { echo('<div class="notice error">'.$msg.'</div>'); } ?>
+	 	<label for="username">Username</label>
+    	<input id="username" name="username" type="text" />
+    	<label for="password">Password</label>
+    	<input id="password" name="password" type="text" />
+    	<button type="submit" class="small green">Log Me In</button>
+	 </form>
+	 </div>
+
+	<div class="col_4">
+	 	&nbsp;
 	 </div>
 
 <!-- ===================================== START FOOTER ===================================== -->

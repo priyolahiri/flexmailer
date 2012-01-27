@@ -34,9 +34,8 @@ return array(
 	|
 	*/
 
-	'GET /' => function()
-	{
-		return View::make('home.index');
-	},
+	'GET /' => 'home@index',
+	'GET /login, POST /login' => 'login@index',
+	'GET /dash' => 'dash@index'
 
 );

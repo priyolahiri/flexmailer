@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Flexmailer | Server Error</title>
+<title>Flexmailer | Home</title>
 <meta charset="UTF-8">
 <meta name="description" content="" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -24,15 +24,21 @@
 	 </div>
 	 <div class="col_12">
 	 <ul class="breadcrumbs alt1">
-	 	<li><a href="/">Home</a></li>
-	 	<li><a href="">Page Not Found</a></li>
+	 	<li><a href="/">Flexmailer</a></li>
+	 	<li><a href="/dash">Dashboard</a></li>
 	 </ul>
 	 </div>
 	 
-	 <div class="col_12">
-	 <h3>Page Not Found</h3>
-	 <p>Sorry, but what you are looking for does not exist</p>
+	 <div class="col_9">
+	 <h3>Your Dashboard</h3>
+	 <p>Welcome to your dashboard</p>
 	 </div>
+	 
+	 <div class="col_3">
+	 <h5>Menu</h5>
+	 
+	 </div>
+
 
 <!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>

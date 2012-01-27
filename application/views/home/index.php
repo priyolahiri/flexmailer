@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>HTML KickStart</title>
+<title>Flexmailer | Home</title>
 <meta charset="UTF-8">
 <meta name="description" content="" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -19,11 +19,13 @@
 		
 		Example: 2 Columns
 	 -->
-	 
+	 <div class="col_12">
+	 	<h2>Flexmailer</h2>
+	 </div>
 	 <div class="col_12">
 	 <ul class="breadcrumbs alt1">
+	 	<li><a href="/">Flexmailer</a></li>
 	 	<li><a href="">Home</a></li>
-	 	<li><a href="">Flexmailer</a></li>
 	 </ul>
 	 </div>
 	 

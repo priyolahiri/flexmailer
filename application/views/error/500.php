@@ -1,103 +1,83 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
+<!DOCTYPE html>
+<html><head>
+<title>Flexmailer | Server Error</title>
+<meta charset="UTF-8">
+<meta name="description" content="" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="js/jquery.snippet.min.js"></script>                         <!-- SNIPPET -->
+<script type="text/javascript" src="js/kickstart.js"></script>                                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />                          <!-- CUSTOM STYLES -->
+</head><body><a id="top-of-page"></a><div id="wrap" class="clearfix">
+<!-- ===================================== END HEADER ===================================== -->
 
-		<title>Error 500 - Internal Server Error</title>
 
-		<style>
-			@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+	<!-- 
+	
+		ADD YOU HTML ELEMENTS HERE
+		
+		Example: 2 Columns
+	 -->
+	 <div class="col_12">
+	 	<h2>Flexmailer</h2>
+	 </div>
+	 <div class="col_12">
+	 <ul class="breadcrumbs alt1">
+	 	<li><a href="/">Home</a></li>
+	 	<li><a href="">Server Error 500</a></li>
+	 </ul>
+	 </div>
+	 <!DOCTYPE html>
+<html><head>
+<title>Flexmailer | Server Error</title>
+<meta charset="UTF-8">
+<meta name="description" content="" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="js/jquery.snippet.min.js"></script>                         <!-- SNIPPET -->
+<script type="text/javascript" src="js/kickstart.js"></script>                                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />                          <!-- CUSTOM STYLES -->
+</head><body><a id="top-of-page"></a><div id="wrap" class="clearfix">
+<!-- ===================================== END HEADER ===================================== -->
 
-			body {
-				background: #eee;
-				color: #6d6d6d;
-				font: normal normal normal 14px/1.253 Ubuntu, sans-serif;
-				margin: 0 0 25px 0;
-				min-width: 800px;
-				padding: 0;
-			}
 
-			#main {
-				background-clip: padding-box;
-				background-color: #fff;
-				border:1px solid #ccc;
-				border-radius: 5px;
-				box-shadow: 0 0 10px #cdcdcd;
-				margin: 25px auto 0;
-				padding: 30px;
-				width: 700px;
-				position: relative;
-			}
+	<!-- 
+	
+		ADD YOU HTML ELEMENTS HERE
+		
+		Example: 2 Columns
+	 -->
+	 
+	 <div class="col_12">
+	 <ul class="breadcrumbs alt1">
+	 	<li><a href="">Home</a></li>
+	 	<li><a href="">Server Error 500</a></li>
+	 </ul>
+	 </div>
+	 
+	 <div class="col_12">
+	 <h3>Server Error - 500</h3>
+	 <p>Oops!! There was a problem with the server. Please report to the admin.</p>
+	 </div>
 
-			#main h1 {
-				font-family: 'Ubuntu';
-				font-size: 38px;
-				letter-spacing: 2px;
-				margin: 0 0 10px 0;
-				padding: 0;
-			}
+<!-- ===================================== START FOOTER ===================================== -->
+<div class="clear"></div>
+<div id="footer">
+&copy; Copyright 2011–2012 All Rights Reserved. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>
+<a id="link-top" href="#top-of-page">Top</a>
+</div>
 
-			#main h2 {
-				color: #999;
-				font-size: 18px;
-				letter-spacing: 3px;
-				margin: 0 0 25px 0;
-				padding: 0 0 0 0;
-			}
+</div><!-- END WRAP -->
+</body></html>
 
-			#main h3 {
-				color: #999;
-				margin-top: 24px;
-				padding: 0 0 0 0;
-			}
+<!-- ===================================== START FOOTER ===================================== -->
+<div class="clear"></div>
+<div id="footer">
+&copy; Copyright 2011–2012 All Rights Reserved. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>
+<a id="link-top" href="#top-of-page">Top</a>
+</div>
 
-			#main h3 {
-				font-size: 18px;
-			}
-
-			#main p {
-				line-height: 25px;
-				margin: 10px 0;
-			}
-
-			#main pre {
-				background-color: #333;
-				border-left: 1px solid #d8d8d8;
-				border-top: 1px solid #d8d8d8;
-				border-radius: 5px;
-				color: #eee;
-				padding: 10px;
-			}
-
-			#main ul {
-				margin: 10px 0;
-				padding: 0 30px;
-			}
-
-			#main li {
-				margin: 5px 0;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="main">
-			<?php $messages = array('Ouch.', 'Oh no!', 'Whoops!'); ?>
-
-			<h1><?php echo $messages[mt_rand(0, 2)]; ?></h1>
-
-			<h2>Server Error: 500 (Internal Server Error)</h2>
-
-			<h3>What does this mean?</h3>
-
-			<p>
-				Something went wrong on our servers while we were processing your request.
-				We're really sorry about this, and will work hard to get this resolved as
-				soon as possible.
-			</p>
-
-			<p>
-				Perhaps you would like to go to our <?php echo HTML::link('/', 'home page'); ?>?
-			</p>
-		</div>
-	</body>
-</html>
+</div><!-- END WRAP -->
+</body></html>
