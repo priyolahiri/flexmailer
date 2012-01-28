@@ -34,8 +34,7 @@ return array(
 	|
 	*/
 
-	'GET /' => 'home@index',
-	'GET /login, POST /login' => 'login@index',
-	'GET /dash' => 'dash@index'
-
+	//'GET /' => 'home@index',
+	//'GET /login, POST /login' => 'login@index',
+	//'GET /dash' => 'dash@index'
 );

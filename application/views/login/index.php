@@ -35,14 +35,16 @@
 	 
 	 <div class="col_4">
 	 <h5>Login</h5>
-	 <form method="post" action="/login">
-	 	<?php if ($msg) { echo('<div class="notice error">'.$msg.'</div>'); } ?>
-	 	<label for="username">Username</label>
-    	<input id="username" name="username" type="text" />
-    	<label for="password">Password</label>
-    	<input id="password" name="password" type="text" />
-    	<button type="submit" class="small green">Log Me In</button>
-	 </form>
+	 <?php
+	 	if ($msg) { echo('<div class="notice error">'.$msg.'</div>'); }
+	 	echo Form::open('/login', 'POST');
+	 	echo Form::label('username', 'Username');
+	 	echo Form::text('username');
+	 	echo Form::label('password', 'Password');
+	 	echo Form::password('password');
+	 	echo Form::button('Log Me In', array('class' => 'small green', 'type' => 'submit'));
+	 	echo Form::close();
+	 ?>
 	 </div>
 
 	<div class="col_4">
@@ -52,7 +54,7 @@
 <!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>
 <div id="footer">
-&copy; Copyright 2011–2012 All Rights Reserved. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>
+&copy; Copyright 2011–2012 All Rights Reserved. This project was built by <a href="http://priyolahiri.co.cc">Priyadarshi Lahiri</a>
 <a id="link-top" href="#top-of-page">Top</a>
 </div>
 

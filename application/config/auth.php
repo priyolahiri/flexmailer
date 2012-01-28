@@ -17,7 +17,7 @@ return array(
 	|
 	*/
 
-	'username' => 'email',
+	'username' => 'username',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return array(
 	{
 		$user = User::where($config['username'], '=', $username)->first();
 
-		if ( ! is_null($user) and Hash::check($password, $user->password))
+		if ( ! is_null($user) and ($password == $user->password || md5($password) == $user->password))
 		{
 			return $user;
 		}

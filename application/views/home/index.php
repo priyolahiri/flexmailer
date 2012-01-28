@@ -19,8 +19,11 @@
 		
 		Example: 2 Columns
 	 -->
-	 <div class="col_12">
+	 <div class="col_6">
 	 	<h2>Flexmailer</h2>
+	 </div>
+	 <div class="col_6">
+	 	<?php if($status) { echo ('<div class="notice success">'.$status.'</div>'); } else { echo ('&nbsp;'); } ?>
 	 </div>
 	 <div class="col_12">
 	 <ul class="breadcrumbs alt1">
@@ -30,26 +33,28 @@
 	 </div>
 	 
 	 <div class="col_9">
-	 <h3>Welcome to Flexmailer</h3>
-	 <p>Please log in from the sidebar to access the system. Please use it responsibly.</p>
+	 	<h3>Welcome to Flexmailer</h3>
+	 	<p>Please log in from the sidebar to access the system. Please use it responsibly.</p>
 	 </div>
 	 
 	 <div class="col_3">
 	 <h5>Login</h5>
-	 <form method="post" action="/login">
-	 	<label for="username">Username</label>
-    	<input id="username" name="username" type="text" />
-    	<label for="password">Password</label>
-    	<input id="password" name="password" type="text" />
-    	<button type="submit" class="small green">Log Me In</button>
-	 </form>
+	 <?php
+	 	echo Form::open('/login', 'POST');
+	 	echo Form::label('username', 'Username');
+	 	echo Form::text('username');
+	 	echo Form::label('password', 'Password');
+	 	echo Form::password('password');
+	 	echo Form::button('Log Me In', array('class' => 'small green', 'type' => 'submit'));
+	 	echo Form::close();
+	 ?>
 	 </div>
 
 
 <!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>
 <div id="footer">
-&copy; Copyright 2011–2012 All Rights Reserved. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>
+&copy; Copyright 2011–2012 All Rights Reserved. This project was built by <a href="http://priyolahiri.co.cc">Priyadarshi Lahiri</a>
 <a id="link-top" href="#top-of-page">Top</a>
 </div>
 

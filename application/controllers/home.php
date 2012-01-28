@@ -36,7 +36,12 @@ class Home_Controller extends Controller {
 
 	public function action_index()
 	{
-		return View::make('home.index');
+		if (Auth::check()) {
+			return Redirect::to('/dash');
+		} else {
+			$flash = Session::get('status');
+			return View::make('home.index')->with('status', $flash);
+		}
 	}
 
 }

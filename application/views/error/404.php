@@ -37,7 +37,7 @@
 <!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>
 <div id="footer">
-&copy; Copyright 2011–2012 All Rights Reserved. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>
+&copy; Copyright 2011–2012 All Rights Reserved. This project was built by <a href="http://priyolahiri.co.cc">Priyadarshi Lahiri</a>
 <a id="link-top" href="#top-of-page">Top</a>
 </div>
 
