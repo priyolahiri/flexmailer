@@ -59,7 +59,7 @@
         		<li><a href="/list/manage">Manage Lists</a></li>
        		</ul>
        	</li>
-    	<li><a href="#">Campaigns</a>
+    	<li><a href="/campaign">Campaigns</a>
     		<ul>
         		<li><a href="/campaign/new">New Campaign</a></li>
         		<li><a href="/campaign/manage">Manage Campaigns</a></li>

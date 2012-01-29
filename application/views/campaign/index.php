@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html><head>
-<title>Flexmailer | Home</title>
+<title>Flexmailer | Campaigns</title>
 <meta charset="UTF-8">
 <meta name="description" content="" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script type="text/javascript" src="js/jquery.snippet.min.js"></script>                         <!-- SNIPPET -->
-<script type="text/javascript" src="js/kickstart.js"></script>                                  <!-- KICKSTART -->
-<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />                  <!-- KICKSTART -->
-<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />                          <!-- CUSTOM STYLES -->
+<script type="text/javascript" src="/js/jquery.snippet.min.js"></script>                         <!-- SNIPPET -->
+<script type="text/javascript" src="/js/kickstart.js"></script>                                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="/css/kickstart.css" media="all" />                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />                          <!-- CUSTOM STYLES -->
 </head><body><a id="top-of-page"></a><div id="wrap" class="clearfix">
 <!-- ===================================== END HEADER ===================================== -->
 
@@ -28,25 +28,29 @@
 	 <div class="col_12">
 	 <ul class="breadcrumbs alt1">
 	 	<li><a href="/">Flexmailer</a></li>
-	 	<li><a href="/dash">Dashboard</a></li>
+	 	<li><a href="/campaign">Campaigns</a></li>
 	 </ul>
 	 </div>
 	 <div class="col_9">
-	 		<h4>Your Dashboard</h4>
-	 		<p>Welcome to your dashboard</p>
+	 		<h4>Campaigns</h3>
+	 		<p>Use the links below to access relevant sections</p>
+	 		<p>
+	 			<a href="/campaign/new" class="button medium green">New Campaign</a>
+	 			<a href="/campaign/manage" class="button medium green">Manage Campaign</a>
+	 		</p>
 	 </div>
 	 
 	 <div class="col_3">
-	 	<h4>Controls</h4>
+	 <h4>Controls</h4>
 	 <ul class="menu vertical right">
-    	<li class="current"><a href="/dash">Dashboard</a></li>
+    	<li><a href="/dash">Dashboard</a></li>
     	<li><a href="/list">Lists</a>
     		<ul>
         		<li><a href="/list/new">New List</a></li>
         		<li><a href="/list/manage">Manage Lists</a></li>
        		</ul>
        	</li>
-    	<li><a href="/campaign">Campaigns</a>
+    	<li class="current"><a href="/campaign">Campaigns</a>
     		<ul>
         		<li><a href="/campaign/new">New Campaign</a></li>
         		<li><a href="/campaign/manage">Manage Campaigns</a></li>
