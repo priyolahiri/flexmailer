@@ -9,6 +9,8 @@
 	IMPORTS
 -----------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+@import url(/css/jquery-ui-1.8.16.custom.css);
+@import url(/css/jquery-ui-timepicker-addon.css);
 
 /*---------------------------------
 	OVERRIDES

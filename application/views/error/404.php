@@ -5,10 +5,10 @@
 <meta name="description" content="" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script type="text/javascript" src="js/jquery.snippet.min.js"></script>                         <!-- SNIPPET -->
-<script type="text/javascript" src="js/kickstart.js"></script>                                  <!-- KICKSTART -->
-<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />                  <!-- KICKSTART -->
-<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />                          <!-- CUSTOM STYLES -->
+<script type="text/javascript" src="/js/jquery.snippet.min.js"></script>                         <!-- SNIPPET -->
+<script type="text/javascript" src="/js/kickstart.js"></script>                                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="/css/kickstart.css" media="all" />                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />                          <!-- CUSTOM STYLES -->
 </head><body><a id="top-of-page"></a><div id="wrap" class="clearfix">
 <!-- ===================================== END HEADER ===================================== -->
 

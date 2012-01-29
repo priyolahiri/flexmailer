@@ -121,10 +121,16 @@ Class List_Controller extends Controller {
 				}
 				$count = 0;
 				foreach ($candidates as $index => $fieldarray) {
-					if(!filter_var($fieldarray['email'], FILTER_VALIDATE_EMAIL) 
-						and !filter_var($fieldarray['e-mail'], FILTER_VALIDATE_EMAIL) 
-						and !filter_var($fieldarray['e_mail'], FILTER_VALIDATE_EMAIL)) {
-						unset($canidate[$index]);
+					$email = $fieldarray['email'];
+					$e_mail = $fieldarray['e-mail'];
+					$e__mail = $fieldarray['e_mail'];
+					if (!filter_var($email, FILTER_VALIDATE_EMAIL) 
+						and !filter_var($e_mail, FILTER_VALIDATE_EMAIL) 
+						and !filter_var($e__mail, FILTER_VALIDATE_EMAIL)) {
+							unset($canidates[$index]);
+							if (!$email and !$e_mail and !$e__mail ) {	
+								unset($canidates[$index]);
+							}
 					}
 						$count++;
 				}

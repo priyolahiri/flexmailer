@@ -281,8 +281,8 @@ Class Campaign_Controller extends Controller {
 		</body>
 		</html>
 		';
-		$mailcontent = $htmlhead.Input::get('message'). $htmlfoot;
 		$campaignname = Session::get('campaignname');
+		$mailcontent = $htmlhead.Input::get('message').'<img src="http://'.$_SERVER['HTTP_HOST']."/opentrack/".$campaignname.'" width="1" height="1" alt="icon" />'.$htmlfoot;
 		$m = new Mongo();
 		$mdb = $m->flexmailer;
 		$tempcampaign = $mdb->tempcampaign;
@@ -294,11 +294,11 @@ Class Campaign_Controller extends Controller {
 		$link3 = $thiscamp['link3'];
 		$link4 = $thiscamp['link4'];
 		$mailcontent = str_replace('##subject##',	$subject,	$mailcontent);
-		$mailcontent = str_replace('##link1##',		$link1, 		$mailcontent);
-		$mailcontent = str_replace('##link2##', 		$link2, 		$mailcontent);
-		$mailcontent = str_replace('##link3##', 		$link3, 		$mailcontent);
-		$mailcontent = str_replace('##link4##', 		$link4, 		$mailcontent);
-		$mailcontent = str_replace('##unsub##', 		$unsub, 	$mailcontent);
+		$mailcontent = str_replace('##link1##',		'http://'.$_SERVER['HTTP_HOST'].'/track/'.$campaignname.'/1', 		$mailcontent);
+		$mailcontent = str_replace('##link2##', 		'http://'.$_SERVER['HTTP_HOST'].'/track/'.$campaignname.'/2', 		$mailcontent);
+		$mailcontent = str_replace('##link3##', 		'http://'.$_SERVER['HTTP_HOST'].'/track/'.$campaignname.'/3', 		$mailcontent);
+		$mailcontent = str_replace('##link4##', 		'http://'.$_SERVER['HTTP_HOST'].'/track/'.$campaignname.'/4', 		$mailcontent);
+		$mailcontent = str_replace('##unsub##', 	$unsub, 	$mailcontent);
 		include(__DIR__.'/../libraries/html2text.php');
 		$html = $mailcontent;
 		$text = html2text($mailcontent);
@@ -306,6 +306,7 @@ Class Campaign_Controller extends Controller {
 		$thiscamp['_id'] = $campaignname;
 		$thiscamp['html'] = $html;
 		$thiscamp['text'] = strip_tags(Input::get('message'));
+		$thiscamp['userid'] = Session::get('laravel_user_id');
 		$campaign->insert($thiscamp,  array("safe" => true));
 		return View::make('campaign.finish')
 				->with('status', $flash)

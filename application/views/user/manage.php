@@ -85,7 +85,7 @@
         		<li><a href="/campaign/manage">Manage Campaigns</a></li>
        		</ul>
         </li>
-    	<li><a href="/reports">Reports</a></li>
+    	<li><a href="/job">Jobs</a></li>
     	<?php if($user->role == 'admin') { ?>
     	<li class="current"><a href="/user">Users</a>
     		<ul>
