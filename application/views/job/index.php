@@ -33,8 +33,29 @@
 	 </div>
 	 <div class="col_9">
 	 		<h4>Jobs</h3>
-	 		<p>Existing Jobs Are Below</p>
-	 		
+	 		<?php
+	 		if ($data) {
+	 			echo('<table><thead><tr><th>Particulars</th><th>Sending Details</th><th>Queing</th><th>Actions</th></tr></thead><tbody>');
+				foreach ($data as $record) {
+					echo('<tr>');
+					echo("<td>Job: ".$record['jobname']."<br/>");
+					echo("Campaign: ".$record['campaignname']."</td>");
+					echo('<td>Total: '.$record['mailcount']." Sent: ".$record['sentcount'].'</td>');
+					echo('<td>'.$record['schedule'].'</td>');
+					echo('<td>');
+					if ($record['schedule']!="n/a" and strtotime($record['schedule'])-time() > 600) {
+						echo('<a href="/job/resched/'.$record['jobname'].'" class="button red small">Reschedule</a>');
+					} elseif ($record['schedule'] == "n/a" and $record['mailcount']-$record['sentcount']<10) {
+						echo('<a href="/job/resend/'.$record['jobname'].'" class="button red small">Resend</a>');
+					}
+					echo('</td>');
+					echo('</tr>');
+				}
+				echo('</tbody></table>');
+	 		} else {
+	 			echo('<p>No jobs found</p>');
+	 		}
+	 		?>
 	 </div>
 	 
 	 <div class="col_3">

@@ -37,5 +37,35 @@ return array(
 	//'GET /' => 'home@index',
 	//'GET /login, POST /login' => 'login@index',
 	//'GET /dash' => 'dash@index'
-	'GET /preview/(:any)' => 'preview@index'
+	'GET /preview/(:any)' => 'preview@index',
+	'GET /track/(:any)/(:any)' => function($campaignname, $link) {
+		$ip - $_SERVER['REMOTE_ADDR'];
+		$m = new Mongo();
+		$mdb = $m->flexmailer;
+		$trackers = $mdb->tracker;
+		$campaigns = $mdb->campaign;
+		$thiscamp = $campaigns->findOne(array("_id" => $campaignname));
+		if ($thiscamp) {
+			$linkout = "link".$link;
+			$visit = $thiscamp[$linkout];
+			$trackers->insert(array('campaignname' => $campaignname, 'link' => $linkout, 'ip' => $ip));
+			return Redirect::to($visit);
+		} else {
+			echo ('Bad Address.');
+		}
+	},
+	'GET /opentrack/(:any)' => function($campaignname) {
+		$m = new Mongo();
+		$mdb = $m->flexmailer;
+		$opentrackers = $mdb->opentracker;
+		$trackers->insert(array('campaignname' => $campaignname, 'ip' => $ip));
+		header('Content-Type: image/gif');
+		echo base64_decode("R0lGODdhAQABAIAAAPxqbAAAACwAAAAAAQABAAACAkQBADs=");
+	},
+	'GET /unsub/(:any)/(:any)' => function($listname, $index) {
+		$m = new Mongo();
+		$mdb = $m->flexmailer;
+		$lists = $mdb->maillist;
+		$lists->update(array('_id' => $listname), array('$pull' => array('candidates' => $index)));
+	}
 );
