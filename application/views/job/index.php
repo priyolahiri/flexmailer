@@ -43,11 +43,10 @@
 					echo('<td>Total: '.$record['mailcount']." Sent: ".$record['sentcount'].'</td>');
 					echo('<td>'.$record['schedule'].'</td>');
 					echo('<td>');
-					if ($record['schedule']!="n/a" and strtotime($record['schedule'])-time() > 600) {
-						echo('<a href="/job/resched/'.$record['jobname'].'" class="button red small">Reschedule</a>');
-					} elseif ($record['schedule'] == "n/a" and $record['mailcount']-$record['sentcount']<10) {
-						echo('<a href="/job/resend/'.$record['jobname'].'" class="button red small">Resend</a>');
+					if ($user->role=="admin") {
+						echo ("<a href='/job/resend/".$record['campaignname']."' class='button small red'>Resend</a>");
 					}
+					echo("<a href='/report/".$record['$campaignname']."' class='button small red'>Report</a>");
 					echo('</td>');
 					echo('</tr>');
 				}

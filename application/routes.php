@@ -66,6 +66,40 @@ return array(
 		$m = new Mongo();
 		$mdb = $m->flexmailer;
 		$lists = $mdb->maillist;
-		$lists->update(array('_id' => $listname), array('$pull' => array('candidates' => $index)));
+		if($lists->update(array('_id' => $listname), array('$pull' => array('candidates' => $index)))) {
+			echo("You have been successfully unsubscribed.");
+		} else {
+			echo("Bad Address");
+		}
+	},
+	'GET /report/(:any)' => function($campaignname) {
+		$m = new Mongo();
+		$mdb = $m->flexmailer;
+		$maillists = $mdb->maillist;
+		$campaigns = $mdb->campaigns;
+		$reports = $mdb->report;
+		$trackers = $mdb->tracker;
+		$opentrackers = $mdb->tracker;
+		$thiscamp = $campaigns->findOne(array('_id' => $campaignname));
+		$thisreport = $reports->find(array('campaignname' => $campaignname));
+		$thistrack = $reports->find(array('campaignname' => $campaignname));
+		$thistrackopen = $reports->find(array('campaignname' => $campaignname));
+		$opencount = $thistrackopen->count();
+		$linkarray = array();
+		for ($k=1; $k=4; $k++) {
+			$var = "link".$k;
+			if ($thiscamp[$var]!= NULL) {
+				array_push($linkarray, array($var => $thiscamp[$var]));
+			}
+		}
+		
+		foreach($linkarray as $var => $link) {
+			
+		} 
+		return View::make('report.index')
+		->with('campaignname', $campaignname)
+		->with('opencount', $opencount)
+		->with('linkarray', $linkarray)
+		;
 	}
 );
